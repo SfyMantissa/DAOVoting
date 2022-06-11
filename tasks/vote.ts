@@ -26,11 +26,11 @@ task("vote",
     const decision = rVote.events[0].args[2];
     const votes = rVote.events[0].args[3];
 
-    console.log("Casted a vote for a proposal with ID " + proposalId + "."
+    console.log("Casted a vote for a proposal with ID " + proposalId + ":"
       + "\n-------------------------"
-      + "\nVoter: " + voter + "."
-      + "\nVoted `for`: " + decision + "."
-      + "\nVotes: " + votes + "."
+      + "\nVoter: " + voter
+      + "\nVoted `for`: " + decision
+      + "\nVotes: " + votes
     );
   });
 

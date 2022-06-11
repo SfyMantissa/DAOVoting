@@ -27,13 +27,13 @@ task("finishProposal",
     const voteCount = rFinishProposal.events[0].args[4];
     const minimumQuorumMet = Boolean(Number(voteCount) > Number(minimumQuorum));
 
-    console.log("Finished a proposal with ID " + proposalId + "."
+    console.log("Finished a proposal with ID " + proposalId + ":"
       + "\n-------------------------"
       + "\nDescription: " + description
-      + "\nAccepted: " + decision + "."
-      + "\nTotal votes: " + voteCount + "."
-      + "\nPositive votes: " + positiveVoteCount + "."
-      + "\nMinimum quorum is met: " + minimumQuorumMet + "."
+      + "\nAccepted: " + decision
+      + "\nTotal votes: " + voteCount
+      + "\nPositive votes: " + positiveVoteCount
+      + "\nMinimum quorum is met: " + minimumQuorumMet
     );
   });
 
