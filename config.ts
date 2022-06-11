@@ -1,0 +1,6 @@
+const config = {
+  DAOVOTING_ADDRESS: "0xadb73b0e9bCf92d6Fe62011bE0028D58Ae7adDA2",
+  YAC_RINKEBY_ADDRESS: "0xB069A157Ed653d91765eA1E8bAc5c18454A83Ba4"
+};
+
+export default config;
