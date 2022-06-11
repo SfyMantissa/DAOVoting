@@ -25,7 +25,7 @@ const main = async () => {
   const daoVoting = await DAOVoting.deploy(
     signerArray[0].address,
     "0xB069A157Ed653d91765eA1E8bAc5c18454A83Ba4",
-    4,
+    1000,
     259200
   );
   await daoVoting.deployed();
