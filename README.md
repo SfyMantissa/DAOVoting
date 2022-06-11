@@ -5,7 +5,7 @@ A DAO proposal voting implementation with ERC-20 tokens.
 ## Features
 
 - [x] The contract is deployed to Rinkeby test network and verified on [Etherscan.](https://rinkeby.etherscan.io/address/0x04F7f5E5762A97Eb869D2bBFC7644D9FEFd049D2#code)
-- [x] Tests provide a 100% coverage (see **"Notes regarding test"** though).
+- [x] Tests provide a 100% coverage in accordance with _solidity-coverage_.
 - [x] Tasks cover most of the interfaces exposed in the ABI (see _tasks/_).
 - [x] All interfaces exposed in the ABI are covered by NatSpec in the smart contract.
 - [x] A comprehensive Markdown documentation is available in _docs/_.
@@ -32,7 +32,6 @@ Bytes used for call in case of success: 0x00
 ```
 
 2. Let's try to deposit some tokens and vote.
-
 Firstly, let's get an overview of the default parameters set in the constructor.
 
 ```
@@ -69,14 +68,14 @@ Votes: 700
 
 3. Now let's finish up our test proposal vote.
 
-Firstly, let's change the debatingPeriodDuration.
+Firstly, let's change the _debatingPeriodDuration_.
 
 ```
 hh setDebatingPeriodDuration --signer 0 --value 60 --network rinkeby
 debatingPeriodDuration value has been changed from 259200 to 60.
 ```
 
-Secondly, let's call the finishProposal function.
+Secondly, let's call the _finishProposal_ function.
 
 ```
 hh finishProposal --signer 1 --proposal-id 1 --network rinkeby
