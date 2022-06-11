@@ -12,10 +12,11 @@ task("vote",
     const DAOVoting = await ethers.getContractFactory("DAOVoting");
     const daoVoting = DAOVoting.attach(config.DAOVOTING_ADDRESS);
 
+    let isFor = (args.decision === 'true');
     const txVote = daoVoting.connect(
       signerArray[args.signer]).vote(
         args.proposalId,
-        args.decision
+        isFor
       );
 
     const rVote = await (await txVote).wait();

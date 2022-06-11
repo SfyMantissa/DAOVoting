@@ -29,7 +29,7 @@ task("addProposal",
 
     console.log("Created a new proposal with ID " + proposalId + "."
       + "\n-------------------------"
-      + "\nDescription: " + description + "."
+      + "\nDescription: " + description
       + "\nStart UNIX timestamp: " + startTimeStamp + "."
       + "\nRecipient address in case of success: " + recipient + "."
       + "\nBytes used for call in case of success: " + args.calldata + "."

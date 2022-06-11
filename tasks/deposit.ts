@@ -14,7 +14,7 @@ task("deposit",
     const YetAnotherCoin = await ethers.getContractFactory("YetAnotherCoin");
     const yetAnotherCoin = YetAnotherCoin.attach(config.YAC_RINKEBY_ADDRESS);
 
-    await yetAnotherCoin.approve(config.DAOVOTING_ADDRESS, args.amount);
+    await yetAnotherCoin.connect(signerArray[args.signer]).approve(config.DAOVOTING_ADDRESS, args.amount);
     const txDeposit = daoVoting.connect(signerArray[args.signer]).deposit(args.amount);
     const rDeposit = await (await txDeposit).wait();
 

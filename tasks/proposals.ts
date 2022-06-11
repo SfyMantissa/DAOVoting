@@ -18,7 +18,7 @@ task("proposals",
       + "\nIs finished: " + proposal.isFinished + "."
       + "\nBytes used for call in case of success: " + proposal.callData + "."
       + "\nRecipient address in case of success: " + proposal.recipient + "."
-      + "\nDescription: " + proposal.description + "."
+      + "\nDescription: " + proposal.description
     );
   });
 
