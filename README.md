@@ -113,7 +113,7 @@ P.S. _hh_ is an alias for _npx hardhat_.
 ## Notes regarding tests
 
 For some weird reason _solidity-coverage_ refuses to see the coverage for one particular branch, although it's clearly covered.
-Yet to find our why.
+Yet to find out why.
 
 ![](demo/issue1.png)
 
