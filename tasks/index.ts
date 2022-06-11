@@ -1,0 +1,14 @@
+import "./signerAddresses";
+import "./debatingPeriodDuration";
+import "./minimumQuorum";
+import "./proposals";
+import "./setDebatingPeriodDuration";
+import "./setMinimumQuorum";
+import "./token";
+import "./userToDeposit";
+import "./userToLastProposalId";
+import "./deposit";
+import "./addProposal";
+import "./vote";
+import "./finishProposal";
+import "./withdraw";
