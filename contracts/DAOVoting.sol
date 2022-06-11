@@ -179,6 +179,11 @@ contract DAOVoting is AccessControl {
       );
 
       require(
+          !proposal.isFinished,
+          "ERROR: This proposal voting is already finished."
+      );
+
+      require(
           block.timestamp <= proposal.startTimeStamp + debatingPeriodDuration,
           "ERROR: This proposal voting no longer accepts new votes."
       );
@@ -187,11 +192,8 @@ contract DAOVoting is AccessControl {
           !proposal.voterHasVoted[msg.sender],
           "ERROR: You can only vote once."
       );
+
       require(userToDeposit[msg.sender] > 0, "ERROR: No tokens deposited.");
-      require(
-          !proposal.isFinished,
-          "ERROR: This proposal voting is already finished."
-      );
 
       uint256 votes = userToDeposit[msg.sender];
       userToLastProposalId[msg.sender] = _proposalId;
