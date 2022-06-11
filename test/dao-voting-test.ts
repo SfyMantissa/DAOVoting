@@ -185,7 +185,7 @@ describe("DAOVoting", () => {
     });
 
     it("vote: should revert because the proposal voting is already finished.", async () => {
-      expect(daoVoting.connect(user2).vote(1, true)).to.be.revertedWith("ERROR: This proposal voting is already finished.");
+      await expect(daoVoting.connect(user2).vote(1, true)).to.be.revertedWith("ERROR: This proposal voting is already finished.");
     });
 
     it("finishProposal: should revert because this proposal voting is already finished.", async () => {
