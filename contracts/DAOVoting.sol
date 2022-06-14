@@ -29,15 +29,15 @@ contract DAOVoting is AccessControl {
     /// @dev List of proposals is stored on-chain.
     mapping(uint256 => Proposal) public proposals;
 
-    struct Proposal {
-        mapping(address => bool) voterHasVoted;
-        uint256 startTimeStamp;
-        uint256 voteCount;
-        uint256 positiveVoteCount;
-        bool isFinished;
-        bytes callData;
-        address recipient;
-        string description;
+    struct Proposal {                           // memory slots are 32 bytes 
+        mapping(address => bool) voterHasVoted; 
+        uint256 startTimeStamp;                 // 32 bytes
+        uint256 voteCount;                      // 32 bytes
+        uint256 positiveVoteCount;              // 32 bytes
+        bool isFinished;                        // 1 byte
+        address recipient;                      // 20 bytes
+        string description;                     // variable (1 byte per char)
+        bytes callData;                         // variable (1 byte per byte1)
     }
 
     /// @dev The instance of token, which is used to make votes.

@@ -210,7 +210,7 @@ function minimumQuorum() external view returns (uint256)
 ### proposals
 
 ```solidity
-function proposals(uint256) external view returns (uint256 startTimeStamp, uint256 voteCount, uint256 positiveVoteCount, bool isFinished, bytes callData, address recipient, string description)
+function proposals(uint256) external view returns (uint256 startTimeStamp, uint256 voteCount, uint256 positiveVoteCount, bool isFinished, address recipient, string description, bytes callData)
 ```
 
 
@@ -231,9 +231,9 @@ function proposals(uint256) external view returns (uint256 startTimeStamp, uint2
 | voteCount | uint256 | undefined |
 | positiveVoteCount | uint256 | undefined |
 | isFinished | bool | undefined |
-| callData | bytes | undefined |
 | recipient | address | undefined |
 | description | string | undefined |
+| callData | bytes | undefined |
 
 ### renounceRole
 
